@@ -14,7 +14,7 @@ class NavigationApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mobile Burgers',
       theme: ThemeData.dark(),
-      home: Homescreen(),
+      home: const Homescreen(),
     );
   }
 }

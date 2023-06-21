@@ -1,92 +1,157 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_mobile_burgues/Item.dart';
 
 class Cardapioscreen extends StatelessWidget {
+  Cardapioscreen({super.key});
   final List<Item> items = [
     Item(
-      title: 'Mega Stacker Cheddar Empanado',
-      image: 'assets/item1.png',
+      title: 'X-tudo',
+      image: 'assets/X-tudo.png',
       description:
-          'Carne, Molho sabor cheddar, Três fatias de Bacon, Molho Stacker, Queijo processado empanado sabor cheddar e pão Whopper.',
-      value: 30.90,
+          'Pão, carne, queijo cheedar, queijo muzzarela, ovo, alface e tomate.',
+      value: 20.90,
     ),
     Item(
-      title: 'Whopper Choripan',
-      image: 'assets/item2.png',
+      title: 'X-bacon',
+      image: 'assets/X-bacon.png',
       description:
-          'Pão com Gergelim, Hamburger tipo Linguiça, Alface, Tomate, Cebola, Queijo sabor Cheddar e Molho Chimichurri',
+          'Pão, bacon, cebola caramelizada, queijo cheedar, carne, tomate e alface.',
       value: 25.90,
     ),
     Item(
-      title: 'Big King',
-      image: 'assets/item3.png',
+      title: 'X-Bomba',
+      image: 'assets/X-bomba.png',
       description:
-          'Dois Hambúgeres grelhados no churrasco, Cheddar, Cebola, Picles, Alface e Molho Big King.',
+          'Pão, Double carne, cebola, queijo cheedar, molho especial, presuto defumado, alface e tomate.',
       value: 59.90,
     ),
     Item(
-      title: 'Chicken Duplo',
-      image: 'assets/item4.png',
-      description:
-          'Pão com gergelim, Dois filés de peito de frango empanado, Cheddar fatiado, Maionese e Alface.',
-      value: 35.90,
+      title: 'X-Chicken',
+      image: 'assets/X-frango.png',
+      description: 'Pão, frango, queijo prato, cebola, alface e tomate.',
+      value: 24.90,
     ),
     Item(
-      title: 'Kids Burger',
-      image: 'assets/item5.png',
-      description:
-          'Pão com gergelim, hambúrguer de carne bovina, uma fatia de queijo derretido.',
-      value: 9.90,
+      title: 'Porção Fritas pequena',
+      image: 'assets/p1_batata.png',
+      description: 'Batatas fritas e sal Pequena.',
+      value: 7.90,
     ),
     Item(
-      title: 'BK WAFFLE',
-      image: 'assets/item6.png',
-      description: ' Waffle, mix sabor baunilha, creme de avelã.',
-      value: 19.90,
+      title: 'Porção Fritas média',
+      image: 'assets/p2_batata.png',
+      description: 'Batatas fritas e sal Média.',
+      value: 14.90,
     ),
     Item(
-      title: 'Batata Frita',
-      image: 'assets/item7.png',
-      description:
-          'Batatas fritas e sal, nós tamanhos pequenas, médias e grandes',
-      value: 7.59,
+      title: 'Porção Fritas grande',
+      image: 'assets/p3_batata.png',
+      description: 'Batatas fritas e sal Grande.',
+      value: 21.90,
     ),
     Item(
-      title: 'Sundae de Chocolate',
-      image: 'assets/item8.png',
-      description: 'Mix de baunilha com calda sabor chocolate.',
-      value: 19.90,
-    ),
-    Item(
-      title: 'Sundae de Doce de Leite',
-      image: 'assets/item9.png',
-      description:
-          'Mix de baunilha com sabor doce de leite, calda de doce de leite e pedaços de amendoim crocante.',
-      value: 19.90,
-    ),
-    Item(
-      title: 'Sundae de Morango',
-      image: 'assets/item10.png',
-      description: 'Mix de baunilha com calda sabor morango.',
-      value: 19.90,
-    ),
-    Item(
-      title: 'Shake de Chocolate',
-      image: 'assets/item11.png',
-      description: 'Baunilha com sabor chocolate e calda de chocolate.',
+      title: 'Fritas Cheedar',
+      image: 'assets/p2_CB.png',
+      description: 'Batatas fritas com cheedar.',
       value: 25.90,
     ),
     Item(
-      title: 'Shake de Morango',
-      image: 'assets/item12.png',
-      description: 'Baunilha com sabor morango e calda de morango.',
+      title: 'Fritas Calabresa',
+      image: 'assets/p2_BC.png',
+      description: 'Batatas fritas com calabresa.',
       value: 25.90,
     ),
     Item(
-      title: 'Água de Copo',
-      image: 'assets/item13.png',
-      description: 'Água Natural Refrescante 310ml.',
-      value: 5.90,
+      title: 'Fritas Bacon e Cheedar',
+      image: 'assets/p2_BB.png',
+      description: 'Batatas fritas com Cheedar e Bacon.',
+      value: 28.90,
+    ),
+    Item(
+      title: 'Fritas Calabresa e Cheedar',
+      image: 'assets/p2_BBC.png',
+      description: 'Batatas fritas com Cheedar e Calabresa.',
+      value: 28.90,
+    ),
+    Item(
+      title: 'Refri Lata',
+      image: 'assets/refri_lata.png',
+      description:
+          'Refrigerantes 350ml : Fanta, Guaraná, Coca Cola, Pespsi, Sprit',
+      value: 5.00,
+    ),
+    Item(
+      title: 'Refri 600',
+      image: 'assets/refri_600ml.png',
+      description:
+          'Refrigerantes 600ml : Fanta, Guaraná, Coca Cola, Pespsi, Sprit',
+      value: 11.90,
     ),
     // Restante dos itens
   ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Cardapio',
+          style: TextStyle(
+            color: Color.fromARGB(255, 255, 251, 251),
+            fontSize: 28.5,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      body: Container(
+        color: const Color.fromARGB(255, 0, 0, 0),
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: ListTile(
+                      leading: Image.asset(
+                        items[index].image,
+                        width: 180,
+                        height: 180,
+                      ),
+                      title: Text(items[index].title),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(items[index].description),
+                          const SizedBox(height: 8),
+                          Text(
+                            'R\$ ${items[index].value.toStringAsFixed(2)}',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25.5,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

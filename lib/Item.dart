@@ -1,3 +1,6 @@
+// ignore: file_names
+// ignore_for_file: file_names
+
 class Item {
   final String title;
   final String image;
